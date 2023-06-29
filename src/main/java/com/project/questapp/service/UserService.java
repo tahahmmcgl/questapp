@@ -42,15 +42,12 @@ public class UserService {
             return null;
     }
 
-    public boolean deleteUser(Long userId) {
-        Optional<User> user = userRepository.findById(userId);
-        if (user.isPresent())
-        {
-            userRepository.deleteById(userId);
-            return true;
+    public void deleteUser(Long userId) {
+        userRepository.deleteById(userId);
+    }
 
-        }else
-            return false;
+    public User getOneUserByUserName(String username) {
+        return userRepository.findByName(username);
     }
 }
 

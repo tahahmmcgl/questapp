@@ -42,7 +42,7 @@ public class UserController {
         return userService.updateUser(newUser,userId);
     }
     @DeleteMapping("/{userId}")
-    public boolean deleteUser(@PathVariable Long userId) {
-        return userService.deleteUser(userId);
+    public void  deleteUser(@PathVariable Long userId) {
+        userService.deleteUser(userId);
     }
 }

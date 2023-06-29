@@ -6,10 +6,12 @@ import com.project.questapp.entities.User;
 import com.project.questapp.repos.CommentRepository;
 import com.project.questapp.request.CommentCreateRequest;
 import com.project.questapp.request.CommentUpdateRequest;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CommentService {
     private CommentRepository commentRepository;
     private UserService userService;
